@@ -1,0 +1,183 @@
+body{
+    font-family: 'Pokemon', serif;
+    background-image: url(../assets/fundo-site.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .titulo{
+    color: #f7f7f8;
+    font-family: 'pokemon2', serif;
+    font-size: 30px;
+}
+
+.cartao{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 5px;
+    position: absolute;
+}
+
+.cartao.selecionado{
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.lista-pokemon{
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+    padding: 12px;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+}
+
+.cartao .nome{
+    
+    font-size: 15.5px;
+    padding: 5px;
+    text-transform: uppercase;
+    background: radial-gradient(#2c2fd6, #6bd9fa, #129bda57);
+    border: 2px solid #529ca670;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.cartao .estrela{
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/nivel-carta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.cartao .nivel-carta{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+.cartao .imagem-carta{
+    max-width: 270px;
+    align-self: center;
+    height: 218px;
+}
+
+.cartao .informacoes{
+    border-radius: 5px;
+    max-width: 300px;
+    background: radial-gradient(circle, #eef1f5, #c4e9ff, #47c6fd);
+    border: 2px solid #47c6fd;
+    text-align: left;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+.cartao .informacoes .informacoes-ataque{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 10px;
+}
+
+.cartao .informacoes .descricao{
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    max-height: 74px;
+    overflow-y: scroll;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.cartao .informacoes .informacoes-ataque span{
+    font-size: 12.7px;
+}
+
+.fundo-1, .fundo-2, .fundo-3, .fundo-4, .fundo-5, .fundo-6, .fundo-7{
+    background: url(../assets/fundo.png);
+    border-radius: 10px;
+    width: 290px;
+}
+
+.btn-seta{
+    background-color: #3162eb8e;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;;
+    box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+
+.btn-seta.btn-voltar{
+    transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+    background-color: #8351fe;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #5767c0c9;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #57bdc0;
+}
+
+.carta-virada{
+    display: none;
+}
+
+.carta-virada.mostrar-fundo-carta{
+    display: block;
+    width: 290px;
+    height: 416px;
+    position: absolute;
+    background-image: url(../assets/fundo-carta.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.cartao.virar{
+    transition: tranform 0.3s ease-in-out;
+}
+
+.esconder{
+    display: none;
+}
